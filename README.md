@@ -2,7 +2,7 @@
 
 # LeaderBoard List App
 
-This project is to set up a Leaderboard list app by developing a first working version of the app following a wireframe.
+This project is to send and receive data from/to the Leaderboard API.
 
 ## Built With
 
