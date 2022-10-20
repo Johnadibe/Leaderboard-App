@@ -8,18 +8,18 @@ const refreshBtn = document.querySelector('.refresh-btn');
 const inputName = document.querySelector('.input-name');
 const inputScore = document.querySelector('.input-number');
 
-const showAPI = async() => {
-    const res = await fetch(`${APIURL}`);
-    const data = await res.json();
-    displayRecentScores(data.result);
-}
+const showAPI = async () => {
+  const res = await fetch(`${APIURL}`);
+  const data = await res.json();
+  displayRecentScores(data.result);
+};
 
 form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    if (!inputName.value || !inputScore.value) return;
-    sendData();
-    inputName.value = '';
-    inputScore.value = '';
+  e.preventDefault();
+  if (!inputName.value || !inputScore.value) return;
+  sendData();
+  inputName.value = '';
+  inputScore.value = '';
 });
 
 refreshBtn.addEventListener('click', showAPI);
