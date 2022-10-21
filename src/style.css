@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -8,9 +10,23 @@ html {
   font-size: 62.5%;
 }
 
-.heading-title {
-  margin: 5rem;
-  font-size: 4.4rem;
+body {
+  background-color: #0c324c;
+  color: #fff;
+  font-family: 'Open Sans', sans-serif;
+  overflow-x: hidden;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  font-size: 2.5rem;
+  padding: 5rem;
+}
+
+.fa-trophy {
+  font-size: 4rem;
 }
 
 .scores-container {
@@ -24,66 +40,121 @@ html {
   display: flex;
   flex-direction: column;
   gap: 3rem;
+  width: 65%;
 }
 
 .recent-scores-inner {
   display: flex;
   align-items: center;
-  gap: 2.8rem;
+  justify-content: space-between;
 }
 
 .scores-title {
-  font-size: 2.8rem;
+  font-size: 3.5rem;
 }
 
 .btn {
-  background: none;
+  background: #fff;
+  border: none;
   color: #000;
-  padding: 0.5rem;
-  font-weight: bold;
+  padding: 1.2rem;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
   cursor: pointer;
+  border-radius: 5px;
+  font-family: 'Open Sans', sans-serif;
+  transition: all 0.3s ease-in;
+}
+
+.btn:hover {
+  background-color: #6fb4e2;
+  color: #fff;
 }
 
 .scores-list {
   list-style: none;
-  border: 2px solid #000;
+  border: 2px solid #333;
+  border-radius: 1rem;
+  background-color: #014e81;
 }
 
 .list-item {
   display: flex;
   align-items: center;
   gap: 2rem;
-  padding: 0.8rem;
+  padding: 1rem;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 1rem;
+  border-radius: 1rem;
+  background-color: #fff;
+  color: #000;
 }
 
 .scores-list .list-item:nth-child(even) {
-  background-color: rgba(51, 51, 51, 0.184);
-}
-
-.list-name,
-.list-score {
-  font-size: 1.8rem;
-  font-weight: bold;
+  background-color: #6fb4e2;
+  color: #fff;
 }
 
 #form {
   display: flex;
   flex-direction: column;
   gap: 3rem;
-  width: 35%;
+  width: 40%;
 }
 
 input {
-  height: 3rem;
-  border: 2px solid #000;
-  padding-left: 0.6rem;
+  min-height: 4rem;
+  padding-left: 1rem;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.7rem;
+  font-weight: 700;
+  box-shadow: rgba(149, 157, 165, 0.2) 0 8px 24px;
 }
 
 input::placeholder {
-  font-weight: bold;
+  font-weight: 700;
 }
 
 .submit-btn {
+  font-size: 2rem;
   width: 40%;
   align-self: flex-end;
+}
+
+@media (min-width: 320px) and (max-width: 600px) {
+  html {
+    font-size: 55%;
+  }
+
+  header {
+    padding: 3.5rem 3rem 5rem 3rem;
+  }
+
+  .scores-container {
+    grid-template-columns: 1fr;
+    padding-top: 2rem;
+  }
+
+  .recent-scores {
+    width: 90%;
+    padding-top: 7.5rem;
+  }
+
+  #form {
+    width: 90%;
+    grid-row: 1;
+  }
+
+  .scores-title {
+    text-align: center;
+  }
+
+  input {
+    height: 5.5rem;
+  }
 }
